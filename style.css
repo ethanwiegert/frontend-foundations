@@ -2,6 +2,7 @@
 
 body {
   font-family: "Lato", sans-serif;
+  min-width: fit-content;
 }
 
 h2 {
@@ -149,35 +150,80 @@ footer p {
 /* -------  Media Query ------- */
 
 @media all and (min-width: 768px) {
-  header{
+ 
+  header {
+    display: flex;
+    justify-content: space-between;
+
+  }
+  .logo {
+    margin-bottom: 20px;
+    font-size: 48px;
+  }
+  header nav ul {
+    align-items: center;
+  }
+
+  .grid-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-description {
+    margin-left: 0px;
+    transform: translateY(20%);
+  }
+
+  section.alternate-background {
+    padding-bottom: 45px;
+  }
+
+  .item label,
+  .item input,
+  .item select,
+  .item button {
+    display: flex;
+    width: 100%;
+  }
+
+  form {
     display:flex;
-    padding: 0 30px;
     justify-content: space-between;
   }
 
-  main img {
-    width: 75%;
+  form div {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
   }
 
+  form label {
+    align-self:flex-start;
+  }
 
+  form input, form select {
+    width: 80%;
+    margin-bottom: 5px;
 
-.itemIdeas{
-  flex: 0 48%;
-  margin-bottom: 2%;
-}
-
-
-  .logo{
-    font-size:50px;
   }
 
   .group {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-  justify-content: center;
-  align-content: center;
+    justify-content: center;
+    flex-flow: row nowrap;
+    align-items: center;
   }
 
-  
+  .find-rental {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .find-rental .item {
+    flex-direction: column;
+    justify-content: flex-end;
+  }
 }
