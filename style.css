@@ -119,12 +119,16 @@ form label {
   padding-right: 10px;
 }
 
-form select,
-form input {
+form select {
   display:flex;
   justify-content: space-between;
+  width: 170px;
 }
-
+form input {
+  padding-right: 15px;
+  justify-content: center;
+  width: 150px;
+  }
 form button {
   background-color: #ff385c;
   border: none;
