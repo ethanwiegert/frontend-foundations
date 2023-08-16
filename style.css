@@ -2,6 +2,7 @@
 
 body {
   font-family: "Lato", sans-serif;
+  min-width: fit-content;
 }
 
 h2 {
@@ -33,7 +34,13 @@ section.alternate-background {
 
 main img {
   width: 100%;
-}
+  }.about-img{
+  padding-top: 15px;
+  padding-bottom: 15px;
+  }.host-img{
+  padding-top: 15px;
+  padding-bottom: 15px;
+  }
 
 /* ---  Groups & Items --- */
 
@@ -52,6 +59,7 @@ main img {
 
 .item-double {
   flex: 2;
+  margin: 10px;
 }
 
 /* -------  Navigation ------- */
@@ -66,6 +74,8 @@ header {
   font-family: "Pangolin", cursive;
   font-size: 72px;
   color: #fff;
+  display: flex;
+  justify-content: center;
 }
 
 header nav{
@@ -99,16 +109,20 @@ header nav ul li a:hover {
 form {
   border: 2px solid #ff385c;
   padding: 10px;
+  display:flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 form label {
   font-weight: bold;
+  padding-right: 10px;
 }
 
 form select,
 form input {
-  margin-bottom: 20px;
-  width: 180px;
+  display:flex;
+  justify-content: space-between;
 }
 
 form button {
@@ -148,6 +162,10 @@ footer p {
     justify-content: space-between;
 
   }
+  p{
+  padding-left: 10px;
+  padding-right: 10px;
+  }
   .logo {
     margin-bottom: 20px;
     font-size: 48px;
@@ -180,31 +198,35 @@ footer p {
   }
 
   form {
-    display:flex;
-    justify-content: space-between;
-  }
-
-  form div {
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+    padding: 10px 10px 10px 10px;
+    }
+    form div {
     display: flex;
     flex-direction: column;
-    min-width: 0;
-  }
-
-  form label {
-    align-self:flex-start;
-  }
-
-  form input, form select {
-    width: 80%;
-    margin-bottom: 5px;
-
-  }
+    }
+    form label {
+    padding-bottom: 15px;
+    font-weight: bold;
+    }
+    .form-input {
+    padding-right: 15px;
+    justify-content: center;
+    }
+    button {
+    justify-content: center;
+    }
 
   .group {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    flex-flow: row nowrap;
     align-items: center;
   }
 
@@ -218,4 +240,12 @@ footer p {
     flex-direction: column;
     justify-content: flex-end;
   }
+  .item {
+    flex: 1;
+    margin: 15px;
+    }
+    .item-double {
+    flex: 2;
+    margin: 15px;
+    }
 }
